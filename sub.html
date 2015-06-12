@@ -1,0 +1,267 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ASAWEB公司简介</title>
+    <style>
+        a {
+            text-decoration: none;
+        }
+
+        .background-div {
+            margin: -8px auto;
+            height: 1133px;
+            width: 1024px;
+            background: url(sub-assets/Contents.png) no-repeat center;
+            background-size: contain;
+            position: relative;
+
+        }
+
+        .login {
+
+            background-image: url("index-assets/login.png");
+            background-size: contain;
+            height: 17px;
+        }
+
+        .logininner {
+            left: 762px;
+            position: relative;
+
+        }
+
+        .logininner a {
+            color: white;
+            font-size: 0.5em;
+
+        }
+
+        .logo {
+            position: relative;
+            left: 30px;
+            top: 5px;
+        }
+
+        .navigation {
+            position: relative;
+            left: 600px;
+            font-weight: bold;
+            font-size: small;
+
+        }
+
+        .navigation a:hover {
+            color: crimson;
+        }
+
+        .hover1 {
+            display: none;
+            background-image: url(index-assets/hover.png);
+            height: 30px;
+            width: 337px;
+            position: relative;
+            left: 600px;
+            float: left;
+
+        }
+
+        .hover2 {
+            display: none;
+            background-image: url(index-assets/hover2.png);
+            height: 30px;
+            width: 337px;
+            position: relative;
+            left: 600px;
+            float: left;
+
+        }
+
+        .hover3 {
+            display: none;
+            background-image: url(index-assets/hover3.png);
+            height: 30px;
+            width: 337px;
+            position: relative;
+            left: 600px;
+            float: left;
+
+        }
+
+        .hover4 {
+            display: none;
+            background-image: url(index-assets/hover4.png);
+            height: 30px;
+            width: 364px;
+            position: relative;
+            left: 650px;
+            float: left;
+
+        }
+
+        .bottom {
+            position: relative;
+            top: 375px;
+        }
+
+        .bottom-left {
+            float: left;
+            position: relative;
+            left: 43px;
+            font-size: 0.5em;
+
+        }
+
+        .bottom-left div {
+            margin-top: 2px;
+        }
+
+        .bottom-right {
+            float: left;
+            position: relative;
+            left: 500px;
+        }
+
+        .left {
+            /*border: 1px solid;*/
+
+            position: relative;
+            top: 256px;
+            height: 160px;
+            left: 40px;
+            width: 212px;
+        }
+
+        .left div {
+            text-align: center;
+            padding: 2px;
+        }
+
+        .left a {
+            margin: auto;
+        }
+
+        .text-navigation {
+            width: 300px;
+            position: relative;
+            top: -55px;
+            left: 722px;
+        }
+
+        .hover {
+            position: absolute;
+        }
+    </style>
+    <script>
+        function undisplay(nu) {
+            document.getElementById("hover" + nu).style.display = 'none';
+        }
+
+
+        function display(nu) {
+            document.getElementById("hover" + nu).style.display = 'block';
+        }
+
+
+    </script>
+</head>
+
+<body>
+<div class="background-div">
+
+    <div class="login">
+        <div class="logininner">
+            <a href="index.html">HOME</a>
+            <a href="javascript:void(0);">JOINUS</a>
+            <a href="javascript:void(0);">CUSTOMER</a>
+            <a href="javascript:void(0);">SITEMAP</a>
+        </div>
+    </div>
+    <a href="index.html"> <img src="index-assets/logo.png" class="logo"/></a>
+
+    <div class="navigation">
+        <a href="" onmouseover="display(1);" onmouseout="undisplay(1);">COMPANY</a>/
+        <a href="" onmouseover="display(2);" onmouseout="undisplay(2);">PRODUCT</a>/
+        <a href="" onmouseover="display(3);" onmouseout="undisplay(3);">CUSTOMER</a>/
+        <a href="" onmouseover="display(4);" onmouseout="undisplay(4);">RECENT</a>/
+        <a href="">COMMUNITY</a>
+    </div>
+    <div id="hover1" class="hover1 hover" onmouseover="display(1);" onmouseout="undisplay(1);">
+        <div style="position: relative;top: 10px;width: auto;margin: 0 auto">
+            <a href="sub.html" style="position: relative;left: 3px">公司简介</a>
+            <a href="sub.html" style="position: relative;left: 23px">公司使命</a>
+            <a href="sub.html" style="position: relative;left: 43px">发展历程</a>
+            <a href="sub.html" style="position: relative;left: 63px">企业愿景</a>
+        </div>
+    </div>
+    <div id="hover2" class="hover2 hover" onmouseover="display(2);" onmouseout="undisplay(2);">
+        <div style="position: relative;top: 10px;width: auto;margin: 0 auto">
+            <a href="" style="position: relative;left: 3px">产品种类</a>
+            <a href="" style="position: relative;left: 23px">推荐产品</a>
+            <a href="" style="position: relative;left: 43px">企业服务</a>
+            <a href="" style="position: relative;left: 63px">个人客户</a>
+        </div>
+    </div>
+    <div id="hover3" class="hover3 hover" onmouseover="display(3);" onmouseout="undisplay(3);">
+        <div style="position: relative;top: 10px;width: auto;margin: 0 auto">
+            <a href="" style="position: relative;left: 3px">企业客户</a>
+            <a href="" style="position: relative;left: 23px">政府客户</a>
+            <a href="" style="position: relative;left: 43px">个人客户</a>
+            <a href="" style="position: relative;left: 63px">反馈建议</a>
+        </div>
+    </div>
+    <div id="hover4" class="hover4 hover" onmouseover="display(4);" onmouseout="undisplay(4);">
+        <div style="position: relative;top: 10px;width: auto;margin: 0 auto">
+            <a href="" style="position: relative;left: 3px">新增产品</a>
+            <a href="" style="position: relative;left: 23px">公司发展</a>
+            <a href="" style="position: relative;left: 43px">技术潮流</a>
+            <a href="" style="position: relative;left: 63px">放眼世界</a>
+        </div>
+    </div>
+    <div class="left">
+        <div style="height: 31px"><a href="">公司简介</a></div>
+        <div style="height: 30px"><a href="">公司背景</a></div>
+        <div style="height: 25px"><a href="">公司管理</a></div>
+        <div style="height: 29px"><a href="">企业愿景</a></div>
+        <div style="height: 30px"><a href="">发展方向</a></div>
+
+
+    </div>
+    <div class="text-navigation">
+
+        <p><a href="javascript:void(0);"> 中国</a> ⟩ <a href="javascript:void(0);">伟大</a></p>
+
+        <p> 本公司致力于网络科技创新</p>
+
+    </div>
+    <div style="height: 380px;width: 650px;position: relative;left: 290px;top: 400px;">
+        <p><a href="index.html">ASAWEB有限公司</a>是一家迅速崛起的高科技软件开发服务提供商和网络运营商，公司以高科技为起点、以技术为核心、以强大的技术队伍为支撑，致力于为政府、企业、个人和网络提供商提供高技术含量的各类应用解决方案，软件开发、网站系统开发和建设。
+        </p>
+
+        <p><a href="index.html">ASAWEB有限公司</a>在开发软件、互联网、网站建设应用和系统平台开发等方面始终保持领先地位，并获得了社会各行业的广泛赞誉和认同。</p>
+
+        <p><a href="index.html">ASAWEB有限公司</a>主要服务范围互联网基础应用服务、互联网推广服务、企业移动信息化服务、软件系统开发服务等内容，为政府、企业、个人等各种机构提供完善的服务。在强大的技术实力的保障下，我们为客户承诺稳定、放心的服务，以打造坚实的企业品牌，公司始终站在技术发展的前沿，追踪、领导IT市场和科技发展的最新趋势，为产品和服务的适用性、前瞻性提供依据。
+        </p>
+
+
+    </div>
+    <div class="bottom">
+        <div class="bottom-left">
+
+            <div>中国 | 自强不惜 ｜ 求实进取 ｜ 乐于奉献 ｜ 踏实肯干</div>
+            <div>公司电话：010-xxxxxxxx
+                公司邮箱：admin@163.com
+                公司地址：中国
+            </div>
+            <div>COPYRIGHT(C) 2015 ASA WEB ALL RIGHT RESERVED</div>
+        </div>
+        <div class="bottom-right">
+            <select>
+                <option>FAMILY SITE</option>
+            </select>
+        </div>
+    </div>
+    <a href="sub.html" style="  position: relative;left: 265px;top: -453px;"><img src="sub-assets/img.png"></a>
+</div>
+</body>
+</html>

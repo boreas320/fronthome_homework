@@ -1,0 +1,476 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ASAWEB官网</title>
+    <style>
+        a {
+            text-decoration: none;
+        }
+
+        .background-div {
+            margin: -8px auto;
+            height: 900px;
+            width: 1024px;;
+            background: url(index-assets/Visual.png) no-repeat center;
+            background-size: contain;
+            position: relative;
+        }
+
+        .login {
+
+            background-image: url("index-assets/login.png");
+            background-size: contain;
+            height: 17px;
+        }
+
+        .logininner {
+            left: 762px;
+            position: relative;
+
+        }
+
+        .logininner a {
+            color: white;
+            font-size: 0.5em;
+
+        }
+
+        .logo {
+            position: relative;
+            left: 30px;
+            top: 5px;
+        }
+
+        .navigation {
+            position: relative;
+            left: 600px;
+            font-weight: bold;
+            font-size: small;
+
+        }
+
+        .navigation a:hover {
+            color: crimson;
+        }
+
+        .contents {
+            background-image: url(index-assets/Contents.png);
+            height: 189px;
+            width: 954px;
+            margin: 0px auto;
+            position: relative;
+            top: 560px;
+
+        }
+
+        .contents div {
+            /*border: 1px solid red;*/
+            position: absolute;
+            top: 10px;
+            height: 167px;
+
+        }
+
+        .contents p {
+            font-family: sans-serif;
+            font-size: 1px;
+        }
+
+        .contents div img {
+            position: absolute;
+        }
+
+        .hover1 {
+            display: none;
+            background-image: url(index-assets/hover.png);
+            height: 30px;
+            width: 337px;
+            position: relative;
+            left: 600px;
+            float: left;
+
+        }
+
+        .hover2 {
+            display: none;
+            background-image: url(index-assets/hover2.png);
+            height: 30px;
+            width: 337px;
+            position: relative;
+            left: 600px;
+            float: left;
+
+        }
+
+        .hover3 {
+            display: none;
+            background-image: url(index-assets/hover3.png);
+            height: 30px;
+            width: 337px;
+            position: relative;
+            left: 600px;
+            float: left;
+
+        }
+
+        .hover4 {
+            display: none;
+            background-image: url(index-assets/hover4.png);
+            height: 30px;
+            width: 364px;
+            position: relative;
+            left: 650px;
+            float: left;
+
+        }
+
+        .bottom {
+            position: relative;
+            top: 570px;
+        }
+
+        .bottom-left {
+            float: left;
+            position: relative;
+            left: 43px;
+            font-size: 0.5em;
+
+        }
+
+        .bottom-left div {
+            margin-top: 2px;
+        }
+
+        .bottom-right {
+            float: left;
+            position: relative;
+            left: 500px;
+        }
+
+        .hover {
+            position: absolute;
+        }
+
+        .about_div p {
+            text-align: center;
+
+        }
+
+        .about_div_a .imgdiv {
+            height: 19px;
+            width: 76px;
+        }
+
+        .about_div_a a {
+            font-size: 3px;
+            text-align: center;
+            color: black;
+
+        }
+
+        .about_div_a a:hover {
+
+            color: red;
+
+        }
+
+        .about_div_a .about_div_a_line {
+            height: 19px;
+            width: 8px;
+            border-left: 1px solid gray;
+            left: -10px;
+            margin: 0px;
+            padding: 0px;
+
+        }
+
+        .contents_title {
+            top: 25px;
+            left: 17px;
+        }
+
+        .presscenter .presscenter_top_div {
+            top: 52px;
+            height: 28px;
+            text-align: center;
+
+            /*border: 1px solid red;*/
+        }
+
+        .uncheckedbutton {
+            background-image: url(index-assets/button.png);
+            border-bottom: 1px solid red;
+            cursor: pointer;
+        }
+
+
+        .checkedbutton {
+            background-image: none;
+            border-top: 1px solid red;
+            border-right: 1px solid red;
+            border-left: 1px solid red;
+            border-bottom: none;
+            cursor: default;
+        }
+
+        .news {
+            position: absolute;
+            font-size: 3px;
+        }
+
+        .news p {
+            display: block;
+            height: 18px;
+            border: 1px solid blue;
+            margin: 0px auto;
+        }
+        .news a {
+            color: black;
+        }
+
+        .news a:hover {
+            color: red;
+        }
+
+        .timetd {
+            width: 30%;
+
+        }
+
+        .button_text {
+            /* border: 1px solid; */
+            display: block;
+            /* vertical-align: middle; */
+            font-size: 10px;
+            /* top: -61px; */
+            /* margin: auto; */
+            margin-top: 8px;
+            padding: auto;
+        }
+    </style>
+    <script>
+        function switchButton(o) {
+
+            var checked = o;
+            var unchecked = o == 'news' ? 'report' : 'news';
+
+            document.getElementById(checked + "_div").className = "presscenter_top_div checkedbutton button";
+            document.getElementById(unchecked + "_div").className = "presscenter_top_div uncheckedbutton button";
+            document.getElementById(checked + "_table").style.display = "table";
+            document.getElementById(unchecked + "_table").style.display = "none";
+//
+//            var buttons = document.getElementsByClassName("button");
+//            for (var i = 0; i < buttons.length; i++) {
+//                if (buttons[i] != o) {
+//                    buttons[i].className = "presscenter_top_div uncheckedbutton button";
+//                }
+//                o.className = "presscenter_top_div checkedbutton button";
+//
+//            }
+        }
+
+
+        function showimg(o) {
+            var subdivs = document.getElementsByClassName("imgdiv");
+            for (var i = 0; i < subdivs.length; i++) {
+                subdivs[i].style.backgroundImage = "none";
+            }
+            var linedivs = document.getElementsByClassName("about_div_a_line");
+            for (var i = 0; i < linedivs.length; i++) {
+                linedivs[i].style.border = "none";
+            }
+
+            document.getElementById("imgdiv" + o).style.backgroundImage = "url(index-assets/Layer75.png)";
+
+            document.getElementById("line" + o).style.borderTop = "1px solid gray";
+            for (var i = o; i < 6; i++) {
+
+                document.getElementById("line" + i).style.borderLeft = "1px solid gray";
+            }
+
+        }
+        function undisplay(nu) {
+            document.getElementById("hover" + nu).style.display = 'none';
+        }
+
+
+        function display(nu) {
+            document.getElementById("hover" + nu).style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+<div class="background-div">
+
+    <div class="login">
+        <div class="logininner">
+            <a href="index.html">HOME</a>
+            <a href="javascript:void(0);">JOINUS</a>
+            <a href="javascript:void(0);">CUSTOMER</a>
+            <a href="javascript:void(0);">SITEMAP</a>
+        </div>
+    </div>
+    <a href="index.html"> <img src="index-assets/logo.png" class="logo"/></a>
+
+    <div class="navigation">
+        <a href="" onmouseover="display(1);" onmouseout="undisplay(1);">COMPANY</a>/
+        <a href="" onmouseover="display(2);" onmouseout="undisplay(2);">PRODUCT</a>/
+        <a href="" onmouseover="display(3);" onmouseout="undisplay(3);">CUSTOMER</a>/
+        <a href="" onmouseover="display(4);" onmouseout="undisplay(4);">RECENT</a>/
+        <a href="">COMMUNITY</a>
+    </div>
+    <div id="hover1" class="hover1 hover" onmouseover="display(1);" onmouseout="undisplay(1);">
+        <div style="position: relative;top: 10px;width: auto;margin: 0 auto">
+            <a href="sub.html" style="position: relative;left: 3px">公司简介</a>
+            <a href="sub.html" style="position: relative;left: 23px">公司使命</a>
+            <a href="sub.html" style="position: relative;left: 43px">发展历程</a>
+            <a href="sub.html" style="position: relative;left: 63px">企业愿景</a>
+        </div>
+    </div>
+    <div id="hover2" class="hover2 hover" onmouseover="display(2);" onmouseout="undisplay(2);">
+        <div style="position: relative;top: 10px;width: auto;margin: 0 auto">
+            <a href="" style="position: relative;left: 3px">产品种类</a>
+            <a href="" style="position: relative;left: 23px">推荐产品</a>
+            <a href="" style="position: relative;left: 43px">企业服务</a>
+            <a href="" style="position: relative;left: 63px">个人客户</a>
+        </div>
+    </div>
+    <div id="hover3" class="hover3 hover" onmouseover="display(3);" onmouseout="undisplay(3);">
+        <div style="position: relative;top: 10px;width: auto;margin: 0 auto">
+            <a href="" style="position: relative;left: 3px">企业客户</a>
+            <a href="" style="position: relative;left: 23px">政府客户</a>
+            <a href="" style="position: relative;left: 43px">个人客户</a>
+            <a href="" style="position: relative;left: 63px">反馈建议</a>
+        </div>
+    </div>
+    <div id="hover4" class="hover4 hover" onmouseover="display(4);" onmouseout="undisplay(4);">
+        <div style="position: relative;top: 10px;width: auto;margin: 0 auto">
+            <a href="" style="position: relative;left: 3px">新增产品</a>
+            <a href="" style="position: relative;left: 23px">公司发展</a>
+            <a href="" style="position: relative;left: 43px">技术潮流</a>
+            <a href="" style="position: relative;left: 63px">放眼世界</a>
+        </div>
+    </div>
+    <div class="contents">
+        <div class="presscenter" style="width: 285px;left: 10px;">
+            <img class="contents_title" src="index-assets/Presscenter.png">
+
+            <div id="news_div" class="presscenter_top_div checkedbutton button" style="width: 61px;left: 17px;"
+                 onclick="switchButton('news')">
+                <span class="button_text">新闻</span>
+            </div>
+
+            <div id="report_div" class="presscenter_top_div button uncheckedbutton"
+                 style="width: 61px;left: 78px;"
+                 onclick="switchButton('report');">
+                <span class="button_text">报告</span>
+            </div>
+
+            <div class="presscenter_top_div" style="width: 122px; left: 139px;border-bottom: 1px solid red"></div>
+            <div class="news" style="  width: 242px;height: 55px;left: 17px;top: 83px;">
+                <table id="news_table" style="width: 100%">
+                    <tr>
+                        <td class="newstd"><a href="">•最新服务架构即将上线</a></td>
+                        <td class="timetd">2015-06-13</td>
+                    </tr>
+                    <tr>
+                        <td class="newstd"><a href="">•技术如期召开</a></td>
+                        <td class="timetd">2015-06-13</td>
+                    </tr>
+                    <tr>
+                        <td class="newstd"><a href="">•重要任务莅临访问我司</a></td>
+                        <td class="timetd">2015-06-13</td>
+                    </tr>
+                </table>
+                <table id="report_table" style="width: 100%;display: none">
+                    <tr>
+                        <td class="newstd"><a href="">•测试通过</a></td>
+                        <td class="timetd">2015-06-13</td>
+                    </tr>
+                    <tr>
+                        <td class="newstd"><a href="">•beta版发布</a></td>
+                        <td class="timetd">2015-06-13</td>
+                    </tr>
+                    <tr>
+                        <td class="newstd"><a href="">•nightbuild持续发布</a></td>
+                        <td class="timetd">2015-06-13</td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+        <div style="width: 358px;left: 306px;">
+            <img class="contents_title" src="index-assets/about_company.png">
+
+            <div class="about_div" style="  height: 90px;width: 122px;left: 111px;top: 48px;">
+                <p style="font-weight: bold;text-decoration: underline;">企业简介</p>
+
+                <p>网络科技公司</p>
+
+                <p>创建于2009年</p>
+
+                <p>高速发展</p>
+            </div>
+            <div class="about_div_a" style="width: 84px;height: 109px;left: 267px;top: 33px;">
+                <div class="imgdiv" id="imgdiv1" style="top: 0px;background-image: url(index-assets/Layer75.png);"
+                     onmouseover="showimg(1)">
+                    <a
+                            href="sub.html">01公司简介</a>
+                </div>
+
+                <div style="top: 20px" class="imgdiv" id="imgdiv2" onmouseover="showimg(2)"><a
+                        href="sub.html">02企业文化</a>
+                </div>
+                <div style="top: 40px" class="imgdiv" id="imgdiv3" onmouseover="showimg(3)"><a
+                        href="sub.html">03行业趋势</a>
+                </div>
+                <div style="top: 60px" class="imgdiv" id="imgdiv4" onmouseover="showimg(4)"><a
+                        href="sub.html">04发展方向</a>
+                </div>
+                <div style="top: 80px" class="imgdiv" id="imgdiv5" onmouseover="showimg(5)"><a
+                        href="sub.html">05业务目标</a>
+                </div>
+                <div class="about_div_a_line" id="line1" style="top: 10px;border-top: 1px solid gray"></div>
+                <div class="about_div_a_line" id="line2" style="top: 29px"></div>
+                <div class="about_div_a_line" id="line3" style="top: 48px"></div>
+                <div class="about_div_a_line" id="line4" style="top: 67px"></div>
+                <div class="about_div_a_line" id="line5" style="top: 86px"></div>
+
+
+            </div>
+            <img src="index-assets/icon.png" style="top: 51px;left: 15px;">
+        </div>
+        <div style="width: 266px;left: 675px;">
+            <img class="contents_title" src="index-assets/customercenter.png">
+
+            <div style="height: 94px;width: 108px;top: 45px;left: 17px;">
+                <p>联系方式</p>
+
+                <p>123123123123</p>
+
+                <p>工作时间</p>
+
+                <p>9:00 - 20:00</p>
+            </div>
+            <img src="index-assets/img.png" style="left: 133px;top: 60px;">
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="bottom-left">
+            <div>中国 | 自强不惜 ｜ 求实进取 ｜ 乐于奉献 ｜ 踏实肯干</div>
+            <div>公司电话：010-xxxxxxxx
+                公司邮箱：<a href="mailto:admin@163.com"> admin@163.com</a>
+                公司地址：中国
+            </div>
+            <div>COPYRIGHT(C) 2015 ASA WEB ALL RIGHT RESERVED</div>
+        </div>
+        <div class="bottom-right">
+            <select>
+                <option>FAMILY SITE</option>
+            </select>
+        </div>
+    </div>
+</div>
+</body>
+</html>
